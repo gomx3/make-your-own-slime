@@ -15,7 +15,7 @@
     }
 
     body {
-        @apply font-pretendard font-light overflow-x-hidden overflow-y-scroll;
+        @apply font-pretendard font-normal overflow-x-hidden overflow-y-scroll;
     }
 }
 
