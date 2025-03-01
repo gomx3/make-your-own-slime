@@ -4,6 +4,7 @@ export const NavBar = () => {
     return (
         <nav>
             <Link to={`/week1`}>week1</Link>
+            <Link to={`/week111`}>week111</Link>
         </nav>
     )
 }
