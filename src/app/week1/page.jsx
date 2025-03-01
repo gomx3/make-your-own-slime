@@ -47,7 +47,7 @@ const ShaderScene = () => {
 
                     // 마우스 위치에 따라 노이즈 크기 조절
                     float mouseDist = distance(st, u_mouse);
-                    float noiseScale = smoothstep(0.0, 1.0, mouseDist * 2.0);
+                    float noiseScale = smoothstep(0.0, 1.0, mouseDist * 3.0);
 
                     // 노이즈 생성 시 마우스 위치와 스케일 반영
                     vec2 noisePos = st * noiseScale * 10.0; // 크기 조절을 위한 10.0 배율
@@ -106,7 +106,8 @@ export default function Week1() {
     return (
         <>
             <div>week1 page</div>
-            <ShaderScene />
+            <ShaderScene className="relative" />
+            <h1 className="absolute z-1000 top-80 left-20 text-3xl">text</h1>
         </>
     )
 }
