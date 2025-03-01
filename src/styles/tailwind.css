@@ -1,0 +1,23 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply box-border [&::-webkit-scrollbar]:hidden;
+    }
+
+    html,
+    body {
+        @apply h-full m-0 p-0;
+    }
+
+    body {
+        @apply font-pretendard font-light overflow-x-hidden overflow-y-scroll;
+    }
+}
+
+@layer components {
+}
