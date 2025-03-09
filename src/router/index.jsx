@@ -3,6 +3,7 @@ import RootLayout from '../app/layout'
 import StudyPage from '../app/page'
 import Week1 from '../app/week1/page'
 import Week2 from '../app/week1/page2'
+import Color from '../app/color/page'
 import Base from '../app/base'
 
 const studyRouter = createBrowserRouter([
@@ -25,6 +26,10 @@ const studyRouter = createBrowserRouter([
             {
                 path: '/base',
                 element: <Base />,
+            },
+            {
+                path: '/color',
+                element: <Color />,
             },
         ],
     },
