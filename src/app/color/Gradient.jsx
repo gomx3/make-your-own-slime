@@ -40,17 +40,17 @@ const GradientScene = () => {
                 uniform vec2 u_mouse;
                 uniform float u_time;
 
-                vec3 sunriseColor = vec3(0.149, 0.141, 0.912); // Night sky (deep blue)
-                vec3 noonColor = vec3(0.529, 0.808, 0.980); // Day sky (sky blue)
-                vec3 sunsetColor = vec3(1.000, 0.424, 0.224); // Sunset (orange)
-                vec3 nightColor = vec3(0.027, 0.027, 0.188); // Deep night (dark blue)
+                vec3 sunriseColor = vec3(0.824, 0.851, 0.424); // Night sky (deep blue)
+                vec3 noonColor = vec3(0.541, 0.812, 0.733); // Day sky (sky blue)
+                vec3 sunsetColor = vec3(0.541, 0.745, 0.812); // Sunset (orange)
+                vec3 nightColor = vec3(0.80, 0.608, 0.792); // Deep night (dark blue)
 
                 void main() {
                     vec2 st = gl_FragCoord.xy / u_resolution.xy;
                     vec3 color = vec3(0.0);
 
                     // Calculate the animation progress as a smooth cycle over a 20-second period
-                    float cycle = mod(u_time / 20.0, 1.0);
+                    float cycle = mod(u_time / 30.0, 1.0);
                     float gradient = st.y;
 
                     // Map the cycle to the day-night transition with gradient

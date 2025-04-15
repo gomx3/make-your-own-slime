@@ -5,6 +5,7 @@ import Week1 from '../app/week1/page'
 import Week2 from '../app/week1/page2'
 import Color from '../app/color/page'
 import Base from '../app/base'
+import TestPage from '../app/test/page'
 
 const studyRouter = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const studyRouter = createBrowserRouter([
             {
                 path: '/color',
                 element: <Color />,
+            },
+            {
+                path: '/test',
+                element: <TestPage />,
             },
         ],
     },
