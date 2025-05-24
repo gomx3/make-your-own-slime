@@ -10,10 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^3.19.1",
+    "@emotion/react": "^11.14.0",
+    "@react-three/drei": "^10.0.8",
+    "@react-three/fiber": "^9.1.2",
     "@tailwindcss/vite": "^4.1.7",
+    "@types/three": "^0.176.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.7"
+    "simplex-noise": "^4.0.3",
+    "tailwindcss": "^4.1.7",
+    "three": "^0.176.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
