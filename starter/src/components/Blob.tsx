@@ -1,12 +1,13 @@
 import { Canvas } from '@react-three/fiber'
 import { useRef } from 'react'
 import { PerspectiveCamera } from '@react-three/drei'
+import MeshComponent from './Mesh'
 
 export default function Blob() {
     const canvasRef = useRef<HTMLCanvasElement>(null)
 
     return (
-        <div id="blob">
+        <div id="blob" style={{ width: '600px', height: '600px' }}>
             {/* 내부에 3D 씬을 구성 */}
             <Canvas ref={canvasRef}>
                 {/* <perspectiveCamera fov={45} aspect={window.innerWidth / window.innerHeight} near={0.1} far={1000} position={[0, 0, 5]} /> */}
@@ -32,7 +33,7 @@ export default function Blob() {
 
                 {/* 실제 3D 오브젝트(mesh)를 그리는 역할
                     canvasRef를 props로 넘기면 내부에서 canvas에 접근하거나 Three.js 관련 처리 가능 */}
-                {/* <MeshComponent {...{ canvasRef }} /> */}
+                <MeshComponent />
             </Canvas>
         </div>
     )

@@ -6,11 +6,10 @@ import { system } from '@chakra-ui/react/preset'
 function App() {
     return (
         <ChakraProvider value={system}>
-            <p className="text-red-500">test</p>
-            <div className="text-yellow-500">test2</div>
-
-            <Blob />
-            <Controller />
+            <main className="flex flex-col justify-center items-center">
+                <Blob />
+                <Controller />
+            </main>
         </ChakraProvider>
     )
 }
