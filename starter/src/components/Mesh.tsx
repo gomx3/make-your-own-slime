@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { Mesh } from 'three'
 import { createNoise3D } from 'simplex-noise'
 import { useAtomValue } from 'jotai'
-import { processAtom, speedAtom, spikeAtom } from '../atoms/slider-atom'
+import { colorAtom, processAtom, speedAtom, spikeAtom } from '../atoms/slider-atom'
 
 const MeshComponent = () => {
     const ref = useRef<Mesh>(null)
@@ -13,6 +13,7 @@ const MeshComponent = () => {
     const speedValue = useAtomValue(speedAtom)
     const spikeValue = useAtomValue(spikeAtom)
     const processValue = useAtomValue(processAtom)
+    const colorValue = useAtomValue(colorAtom)
 
     useFrame(() => {
         const time = performance.now() * 0.00001 * speedValue * Math.pow(processValue, 3)
@@ -40,7 +41,7 @@ const MeshComponent = () => {
     return (
         <mesh ref={ref}>
             <sphereGeometry args={[0.8, 128, 128]} />
-            <meshPhongMaterial color="#707070" shininess={700} />
+            <meshPhongMaterial color={colorValue} shininess={700} />
         </mesh>
     )
 }

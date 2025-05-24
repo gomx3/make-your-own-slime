@@ -7,6 +7,7 @@ function App() {
     return (
         <ChakraProvider value={system}>
             <main className="flex flex-col justify-center items-center">
+                <h1 className="text-xl">make your own slime **</h1>
                 <Blob />
                 <Controller />
             </main>

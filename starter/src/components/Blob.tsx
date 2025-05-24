@@ -1,15 +1,12 @@
 import { Canvas } from '@react-three/fiber'
-import { useRef } from 'react'
 import { PerspectiveCamera } from '@react-three/drei'
 import MeshComponent from './Mesh'
 
 export default function Blob() {
-    const canvasRef = useRef<HTMLCanvasElement>(null)
-
     return (
-        <div style={{ width: '600px', height: '600px' }}>
+        <div style={{ width: '400px', height: '400px' }}>
             {/* 내부에 3D 씬을 구성 */}
-            <Canvas ref={canvasRef}>
+            <Canvas>
                 {/* <perspectiveCamera fov={45} aspect={window.innerWidth / window.innerHeight} near={0.1} far={1000} position={[0, 0, 5]} /> */}
                 {/* 
                     fov: 시야각 (field of view) (도)
@@ -27,7 +24,7 @@ export default function Blob() {
                 />
                 {/* directionalLight: 방향성 조명. 태양처럼 한 방향에서 빛을 비추며 그림자 생성
                     ambientLight: 전반적으로 은은한 조명. 모든 물체에 균일하게 영향 */}
-                <directionalLight color="#fff" intensity={0.7} castShadow={true} position={[0, 500, 200]} />
+                <directionalLight color="#fff" intensity={1} castShadow={true} position={[0, 500, 200]} />
                 <directionalLight color="#fff" intensity={0.25} castShadow={true} position={[0, -500, 400]} />
                 <ambientLight color="#bfbfbf" />
 
