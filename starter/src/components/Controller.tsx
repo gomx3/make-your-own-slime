@@ -9,20 +9,9 @@ const Controller = () => {
 
     return (
         <div className="flex flex-col lg:flex-row justify-between items-center gap-x-10 gap-y-3">
-            <div>
-                <label>Speed</label>
-                <ControlSlider value={speed} setValue={setSpeed} min={0} max={30} step={5} />
-            </div>
-
-            <div>
-                <label>Spike</label>
-                <ControlSlider value={spike} setValue={setSpike} min={0} max={5} step={0.1} />
-            </div>
-
-            <div>
-                <label>Process</label>
-                <ControlSlider value={process} setValue={setProcess} min={0} max={5} step={0.5} />
-            </div>
+            <ControlSlider label="Speed" value={speed} setValue={setSpeed} min={0} max={30} step={5} />
+            <ControlSlider label="Spike" value={spike} setValue={setSpike} min={0} max={5} step={0.1} />
+            <ControlSlider label="Process" value={process} setValue={setProcess} min={0} max={5} step={0.5} />
         </div>
     )
 }
