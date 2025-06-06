@@ -7,14 +7,12 @@ import Footer from './components/_common/footer'
 function App() {
     return (
         <ChakraProvider value={system}>
-            <div className="flex flex-col min-h-screen">
-                <main className="flex flex-1 flex-col justify-center items-center">
-                    <h1 className="text-xl">make your own slime **</h1>
-                    <Blob />
-                    <Controller />
-                </main>
-                <Footer />
-            </div>
+            <main className="flex flex-col justify-center items-center">
+                <h1 className="text-xl">make your own slime **</h1>
+                <Blob />
+                <Controller />
+            </main>
+            <Footer />
         </ChakraProvider>
     )
 }
