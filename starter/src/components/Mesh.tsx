@@ -73,9 +73,8 @@ function Pointer() {
         api.position.set((state.pointer.x * viewport.width) / 2, (state.pointer.y * viewport.height) / 2, 0)
     )
     return (
-        <mesh ref={ref} scale={0.2}>
-            <sphereGeometry />
-            <meshBasicMaterial color={[4, 4, 4]} toneMapped={false} />
+        <mesh ref={ref}>
+            <meshBasicMaterial toneMapped={false} />
         </mesh>
     )
 }
