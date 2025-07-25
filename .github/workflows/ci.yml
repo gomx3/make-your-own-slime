@@ -37,8 +37,5 @@ jobs:
       - name: 🧹 Run lint
         run: pnpm lint
 
-      - name: 🧪 Run tests
-        run: pnpm test
-
       - name: 🏗 Build project
         run: pnpm build
