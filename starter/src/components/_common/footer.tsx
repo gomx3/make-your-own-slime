@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-        <footer className="absolute bottom-1 right-1">
-            <p>곰 공부용</p>
+        <footer className="fixed bottom-3 right-3">
+            <p>곰 공부용: @gomx3</p>
         </footer>
     )
 }
