@@ -1,7 +1,8 @@
 import { ChakraProvider } from '@chakra-ui/react'
+import { system } from '@chakra-ui/react/preset'
+
 import Blob from './components/Blob'
 import Controller from './components/Controller'
-import { system } from '@chakra-ui/react/preset'
 import Footer from './components/_common/footer'
 
 function App() {

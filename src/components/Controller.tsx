@@ -10,7 +10,7 @@ const Controller = () => {
     const [color, setColor] = useAtom(colorAtom)
 
     return (
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-x-10 gap-y-3">
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-x-10 gap-y-3">
             <ColorPalette color={color} setColor={setColor} />
             <ControlSlider label="Speed" value={speed} setValue={setSpeed} min={0} max={20} step={1} />
             <ControlSlider label="Spike" value={spike} setValue={setSpike} min={0} max={5} step={0.1} />
