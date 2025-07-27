@@ -4,7 +4,7 @@ import MeshComponent from './Mesh'
 
 export default function Blob() {
     return (
-        <div style={{ width: '100vw', height: '50vh' }}>
+        <div style={{ width: '100vw', height: '40vh' }}>
             {/* 내부에 3D 씬을 구성 */}
             <Canvas>
                 {/* <perspectiveCamera fov={45} aspect={window.innerWidth / window.innerHeight} near={0.1} far={1000} position={[0, 0, 5]} /> */}

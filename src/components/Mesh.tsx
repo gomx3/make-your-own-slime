@@ -17,7 +17,6 @@ const MeshComponent = () => {
 }
 
 function Clump() {
-    console.log('re')
     const ref = useRef<Mesh>(null)
     const noise3D = useMemo(() => createNoise3D(), [])
 
