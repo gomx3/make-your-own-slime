@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useRef } from 'react'
+import { useMemo, useRef } from 'react'
 import { Mesh } from 'three'
 import { createNoise3D } from 'simplex-noise'
 import { useAtomValue } from 'jotai'
@@ -18,16 +18,16 @@ const MeshComponent = () => {
 
 function Clump() {
     const ref = useRef<Mesh>(null)
-    const noise3D = createNoise3D()
+    const noise3D = useMemo(() => createNoise3D(), [])
 
     const speedValue = useAtomValue(speedAtom)
     const spikeValue = useAtomValue(spikeAtom)
     const processValue = useAtomValue(processAtom)
     const colorValue = useAtomValue(colorAtom)
 
-    const { viewport, pointer } = useThree()
+    useFrame((state) => {
+        const { viewport, pointer } = state
 
-    useFrame(() => {
         const time = performance.now() * 0.00001 * speedValue * Math.pow(processValue, 3)
         const spikes = spikeValue * processValue
 

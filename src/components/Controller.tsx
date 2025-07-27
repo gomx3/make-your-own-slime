@@ -1,6 +1,8 @@
+import { useEffect } from 'react'
 import { useAtom } from 'jotai'
-import ControlSlider from './ControlSlider'
 import { colorAtom, processAtom, speedAtom, spikeAtom } from '../atoms/slider-atom'
+
+import ControlSlider from './ControlSlider'
 import ColorPalette from './ColorPicker'
 
 const Controller = () => {
@@ -9,8 +11,22 @@ const Controller = () => {
     const [process, setProcess] = useAtom(processAtom)
     const [color, setColor] = useAtom(colorAtom)
 
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search)
+
+        const speed = params.get('speed')
+        const spike = params.get('spike')
+        const process = params.get('process')
+        const color = params.get('color')
+
+        if (speed && !isNaN(Number(speed))) setSpeed(Number(speed))
+        if (spike && !isNaN(Number(spike))) setSpike(Number(spike))
+        if (process && !isNaN(Number(process))) setProcess(Number(process))
+        if (color) setColor(color)
+    }, [setSpeed, setSpike, setProcess, setColor])
+
     return (
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-x-10 gap-y-3">
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-x-10 gap-y-3">
             <ColorPalette color={color} setColor={setColor} />
             <ControlSlider label="Speed" value={speed} setValue={setSpeed} min={0} max={20} step={1} />
             <ControlSlider label="Spike" value={spike} setValue={setSpike} min={0} max={5} step={0.1} />

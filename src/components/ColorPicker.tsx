@@ -7,11 +7,7 @@ interface ColorPaletteProps {
 
 const ColorPalette = ({ color = '#707070', setColor }: ColorPaletteProps) => {
     return (
-        <ColorPicker.Root
-            defaultValue={parseColor(color)}
-            width="250px"
-            onValueChange={(e) => setColor(e.valueAsString)}
-        >
+        <ColorPicker.Root value={parseColor(color)} width="250px" onValueChange={(e) => setColor(e.valueAsString)}>
             <ColorPicker.HiddenInput />
             <ColorPicker.Label>Color</ColorPicker.Label>
             <ColorPicker.Control>
